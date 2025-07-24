@@ -9,7 +9,7 @@ from .models import Link
 
 def scrape(request):
     if request.method == 'POST':
-        site = request.POST.get['site', '']
+        site = request.POST.get('site', '')
 
         page = requests.get(site)
         soup = BeautifulSoup(page.text, 'html.parser')
